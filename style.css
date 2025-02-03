@@ -131,4 +131,8 @@ h1{
         font-size: 1.3rem;
     }
 }
-    
+@media(min-width: 1000px){
+    header{
+        font-size: 7rem;
+    }
+}    
