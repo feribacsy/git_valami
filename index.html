@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/f23a45aef5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header><img src="img/github.svg" alt="GitHub"> GitHub</header>
+    <nav></nav>
+    <section>
+        <article>
+            <h3>Mi az a Git és a GitHub?</h3>
+            <p>A Git és a GitHub olyan népszerű eszközök, amelyeket a programozásban használnak. Segítenek abban, hogy
+                különböző verzióit kezeld a kódodnak és együtt tudj dolgozni más fejlesztőkkel.</p>
+            <p>A projektek építése a programozók munkájának alapvető része. A Git és a GitHub pedig elengedhetetlen
+                eszközök, amelyeket a projektek építése során használsz másokkal együttműködve.
+            </p>
+        </article>
+        <article>
+
+            <p>A Git-et 2005-ben Linus Torvalds fejlesztette ki nyílt forráskódú szoftverként, hogy nyomon követhesse a
+                változásokat
+                egy elosztott verziókezelő rendszerben.
+            </p>
+            <p>
+                A Git a változásokat egy elosztott verziókezelő rendszeren keresztül követi. Ez azt jelenti, hogy a Git
+                követni tudja a projekt különböző verzióinak állapotát, amíg fejleszted őket. Elosztott, mert
+                hozzáférhetsz
+                a kód fájljaidhoz egy másik számítógépről - és ugyanígy más fejlesztők is hozzáférhetnek.
+            </p>
+            <p>
+                Ha nyílt forráskódú projektet építesz, szükséged lesz egy módra, hogy dokumentáld vagy nyomon kövesd a
+                kódodat. Ez segít abban, hogy rendezetten tudj dolgozni, és nyomon tudd követni a végrehajtott
+                változtatásokat. Ezt teszi lehetővé a Git.
+            </p>
+            <p>
+                Azonban szükséged van egy helyre is, ahol hostolhatod a kódodat - ami lehetővé teszi, hogy minden
+                projekt
+                verzióját könnyebb és gyorsabb kontrollálni. Ebben segít a GitHub.
+            </p>
+            <p>
+                A GitHub egy "hub" (egy hely vagy platform), ahol a Git felhasználók együtt építenek szoftvert. A GitHub
+                emellett egy hosting szolgáltató és verziókezelő platform, amelyen nyílt forráskódú projekteken tudsz
+                együttműködni és
+                fájlokat megosztani. Amikor a GitHub-ot használod, a Git-et használod az alapoknál.
+            </p>
+            <p>
+                Ennek következtében egyre több vállalat követeli meg a Git és a GitHub használatát az új munkatársak
+                részéről.
+                Tehát ha
+                fejlesztői munkára készülsz, ezek az alapvető készségek, amelyekkel rendelkezned kell.
+            </p>
+        </article>
+        <article>
+            <h3>A Git és a GitHub közti különbségek</h3>
+            <p>A Git egy verziókezelő rendszer, amely kezeli és nyomon követi a kódodat. A GitHub viszont egy
+                szolgáltatás,
+                amely lehetővé teszi a kód fájljainak hostolását, megosztását és kezelését az interneten.
+            </p>
+            <p>
+                A GitHub-nak a Git az alapja, és lehetővé teszi, hogy könnyen kezeld a Git repositoryaidat vagy
+                mappáidat a
+                platformján.
+            </p>
+            <p>
+                Tehát a Git az effektív verziókezelő rendszer, és a GitHub a platform, ahol hostolod a kódodat.
+            </p>
+        </article>
+        <article>
+            <h3>Alapvető parancsok:</h3>
+            <p>Ellenőrizd, hogy telepítve van-e a gépeden</p>
+            <span class="masol">
+                <input id="sz1" type="text" value="git version">
+                <i class="fa fa-clone" id="sz1_btn"></i>
+            </span>
+
+            <p>Ha nincs telepítve, akkor könnyedén letöltheted és telepítheted innen:
+                <a href="https://git-scm.com/download"> https://git-scm.com/download</a>
+            </p>
+        </article>
+
+        <article>
+            <h3>Hozz létre egy saját GitHub fiókot!</h3>
+            <p>A GitHub fiók létrehozásához szükséges néhány személyes adatot megadni, például a nevedet, e-mail címedet
+                megerősíteni,
+                felhasználónevet és jelszót beállítani, és a fiókod néhány perc alatt elkészül.
+            </p>
+        </article>
+
+        <article>
+            <h3>Csatlakoztasd a GitHub fiókodat a Git fiókodhoz!</h3>
+            <p>Az egyszerűbb hitelesítés érdekében azonos email címet és felhasználónevet adj meg a fenti git beállítás
+                és a
+                GitHub-os
+                regisztráció során.
+            </p>
+
+            <p>Git felhasználóneved beállításához a parancssorba:</p>
+
+            <span class="masol">
+                <input id="sz2" type="text" value="git config --global user.felhasznalonev" size="35">
+                <i class="fa fa-clone" id="sz2_btn"></i>
+            </span>
+            <p>E-mail cím beállításához:</p>
+
+            <span class="masol">
+                <input id="sz3" type="text" value="git config --global user.emailcimed" size="35">
+                <i class="fa fa-clone" id="sz3_btn"></i>
+            </span>
+            <span class="masol">
+                <input id="sz4" type="text" value="git config --global user.email" size="35">
+                <i class="fa fa-clone" id="sz4_btn"></i>
+            </span>
+
+        </article>
+        <article>
+            <h3>Készíts egy kódot! Pl. Egy HTML oldalt</h3>
+            <p>Nem kell készre!
+            </p>
+        </article>
+        <article>
+            <h3>Hozz létre egy GitHub repository-t!</h3>
+            <p>Kattints a jobb felső sarokban található + jelre, hogy létrehozz egy új repository-t. A repository-k
+                olyanok,
+                mint a mappáid az interneten.
+            </p>
+        </article>
+        <article>
+            <h3>Készíts egy új repository-t a számítógépeden!</h3>
+            <p>A beépített kódszerkesztő terminálját használhatod a Git használatához, hogy feltöltsd a kódodat a
+                GitHub-ra.
+                A VSCode-ban a terminál megnyitásához használd a "ctrl + shift + ö" billentyűkombinációt.
+
+                Írd be a következő parancsokat egyenként a terminálban, a folytatáshoz minden parancs után "Enter"
+            </p>
+            <div class="parancsok">
+                <p>echo "# pelda" >> README.md
+                </p>
+                <p>git init
+                </p>
+                <p>git add README.md
+                </p>
+                <p>git commit -m "first commit"
+                </p>
+                <p>git branch -M main
+                </p>
+                <p>git remote add origin https://github.com/te_fiokod/te_repositoryd.git"
+                </p>
+                <p>git push -u origin main</p>
+            </div>
+        </article>
+        <article>
+            <h5>git init</h5>
+            <p>
+                A git init parancs létrehoz egy új Git repositoryt a jelenlegi mappában. A Git segítségével nyomon
+                követheted és
+                kezelheted a mappában található fájlok változásait és verzióit.
+            </p>
+            <h5>
+                git add</h5>
+            <p>
+                A git add parancs hozzáadja a módosított fájlokat a következő commit-hoz. Ezután azok készen állnak a
+                commit-ra.
+            </p>
+            <h5>
+                git commit</h5>
+            <p>
+                A git commit parancs elmenti a fájlok aktuális állapotát a helyi repositoryba, és hozzárendel egy egyedi
+                azonosítót a
+                változtatásokhoz. Ezenkívül lehetőséget ad arra, hogy egy üzenetet is adjunk a commit-hoz, amely
+                részletesen
+                leírja a
+                változtatásokat.
+            </p>
+            <h5>
+                git branch</h5>
+            <p>
+                A git branch parancs létrehoz egy új ágat a projektben. Az ág lehetővé teszi, hogy párhuzamosan
+                dolgozhassunk több
+                funkcióval, majd ezeket a változtatásokat a fő ágba egyesítsük.
+            </p>
+            <h5>
+                git remote add origin</h5>
+            <p>
+                A git remote add origin parancs hozzáadja az upstream repository hivatkozását a lokális repository-hoz.
+                Az
+                "origin"
+                nevet általában az upstream repository-hoz adott hivatkozásra használják.
+            </p>
+            <h5>
+                git push</h5>
+            <p>
+                A git push parancs feltölti a lokális repository-ban található változtatásokat az upstream
+                repository-ba, így megoszthatjuk a munkánkat a csapat többi tagjával.</p>
+        </article>
+        <article>
+            <h2>Olvass tovább!</h2>
+        </article>
+    </section>
+    <footer><a href="oldal_2.html"><button class="prev_next">Next >></button></a></footer>
+ 
+   
+</body>
+    <script src="js.js">
+         /*const szoveg_1_btn = document.getElementById("sz1_btn");
+
+            szoveg_1_btn.onclick = function () {
+                sz1.select();
+                document.execCommand("Copy");
+            };
+            const szoveg_2_btn = document.getElementById("sz2_btn");
+
+                szoveg_2_btn.onclick = function () {
+                    sz2.select();
+                    document.execCommand("Copy");
+                };
+            */
+    </script>
+</html>

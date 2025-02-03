@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header><img src="img/github.svg" alt="GitHub"> GitHub</header>
+    <nav></nav>
+    <section>
+        <article>
+            <h1>Git parancsok</h1>
+
+            <h5>git init</h5>
+            <p>A repository inicializálása, létrehozása</p>
+
+            <h5>touch .gitignore</h5>
+            <p>
+                Segítségével egy rejtett állapotú fájlt hozzunk létre, melyben megadhatjuk azon elemekt, melyeket ki
+                akarunk zárni a
+                verziókezelés folyamatából, pl. mert lokális, vagy érzékeny adatokat tartalmaz
+            </p>
+
+            <h5>git status</h5>
+            <p>A verziókezelésben részt vevő fájlok, working directory állapota</p>
+
+            <h5>git add [filename]</h5>
+            <p>
+                Fájl hozzáadása a verziókezeléshez. Helyettesítő karakterként a pont is használható pl. "git add ."
+                ebben az esetben
+                valamennyi elemet hozzáadja a verziókezelés folyamatához.
+            </p>
+
+            <h5>git commit -m "Commit message"</h5>
+            <p>
+                A verzió kezelésre jelölt elemek mentése. A "-m" kapcsoló a a commit-hoz kapcsolódó megjegyzés
+                megadásához szükséges.
+                Elhagyása esetén a default szerkesztő nyílik meg.
+            </p>
+
+            <h5>git mv [régi név] [új név]</h5>
+            <p>Fájl átnevezése</p>
+
+            <h5>git rm [fájl név]</h5>
+            <p>Fájl törlése</p>
+
+            <h5>git log</h5>
+            <p>A commit-ok listája. A -[number] paraméterrel megadhatjuk, hogy visszafelé hány elemet mutasson</p>
+
+            <h5>git diff</h5>
+            <p>Két commit közt bekövetkezett és mentett változásokat jeleníti meg.</p>
+
+            <h5>git blame [filename]</h5>
+            <p>Megutatja, hogy ki módosította a fájl tartamát.</p>
+
+            <h5>git tag [tag_name]</h5>
+            <p>Az HEAD egy címkét kap, -d kapcsoló törli a címkét.</p>
+
+            <h5>git branch [branch név]</h5>
+            <p>Új fejlesztői ág létrehozása</p>
+
+            <h5>git checkout [branch név]</h5>
+            <p>Váltás a fejlesztői ágak között</p>
+
+            <h5>git branch -m [régi_név] [uj_név]</h5>
+            <p>Branch átnevezése</p>
+            <h5>
+
+                git branch -D [branch nev]
+            </h5>
+            <p>
+                Branch törlés annak ellenőrzése nélkül hogy tartalma mergelve volt-e, ha ellenőrizve szeretnénk, akkor a
+                -d kapcsolót
+                kell használnunk
+            </p>
+
+            <h5>git merge [összeolvasztandó fejlesztési ág neve]</h5>
+            <p>
+                Fejlesztési ágak összeolvasztása, egyesítése, Első lépésként váltanunk kell arra a branch-re amibe be
+                szeretnénk
+                olvasztani a kiválasztott branch-et, majd kiadni a fenti parancsot.
+            </p>
+
+            <h5>du -s .git</h5>
+            <p>Repo által elfoglalt terület.</p>
+
+            <h5>git gc</h5>
+            <p>Repo újraszervezése, méretének csökkentése.</p>
+
+            <h5>git fsck</h5>
+            <p>Repo épségének ellenőrzése</p>
+
+
+        </article>
+    </section>
+    <footer>
+        <a href="oldal_2.html"><button class="prev_next">
+                << Previous</button></a>
+
+
+    </footer>
+</body>
+
+</html>

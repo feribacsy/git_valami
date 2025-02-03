@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header><img src="img/github.svg" alt="GitHub"> GitHub</header>
+    <nav></nav>
+    <section>
+        <article>
+            <h1>Git alapfogalmak</h1>
+
+            <h3>Repository</h3>
+            <p>
+                Az adatbázis neve, amely a verziókezelt fájlokat tárolja. Lényegében egy mappa a fájlokkal, amiben van
+                egy speciális
+                rejtett .git mappa, ami a kezeléshez szükséges adatbázist tárolja.
+            </p><br>
+
+            <h3>Server / Origin</h3>
+            <p>
+                A szerver, amely a repository-t tárolja és kiszolgálja a fejlesztőknek. A fejlesztők a saját gépükön
+                rendelkezhetnek
+                privát repository-val is, azonban a többi fejlesztőnek csak az lesz elérhető, ami a szerveren van. Mivel
+                a Git elosztott
+                rendszerű, ezért nem szükséges a repository-t publikálni egy másik gépre, vagyis szerverre. Ezek nélkül
+                is használható,
+                viszont biztonsági mentés szempontjából ajánlott.
+            </p><br>
+
+            <h3>Client</h3>
+            <p>A kliens gép, amely a szerverhez csatlakozik.</p><br>
+
+            <h3>Working Set / Working Copy</h3>
+            <p>A fejlesztő helyi gépén tárolt változata a repository-nak</p>.<br>
+
+            <h3>Revision number</h3>
+            <p>
+                A repository-ban tárolt változatokra ennek segítségével tudunk hivatkozni. Git esetén ez egy hasító
+                függvénnyel1 képzett
+                érték, ami egyedileg és egyértelműen beazonosítja a változatokat.
+            </p><br>
+
+            <h3>Head</h3>
+            <p>A legutolsó revision number hivatkozó kifejezése.</p><br>
+
+            <h3>Main / branch</h3>
+            <p>
+                A repository-t érdemes úgy felfogni, mint egy fa ágát. A main a fő ág. Ebből az ágból bármelyik ponton
+                készíthetünk al
+                ágat, amit branch-nek nevezünk. A branch létrehozása után külön változatként él tovább. A létrehozott
+                branch-ek bármikor
+                beintegrálhatóak bármelyik ágba, akár vissza a fő ágba is. Legnagyobb előnyük, hogy kísérletezésre, új
+                funkciók
+                fejlesztésére biztosítanak lehetőséget anélkül, hogy új repository-t kellene létrehoznunk.
+            </p><br>
+
+            <h3>Merge</h3>
+            <p>Két ág, branch összeolvasztásának folyamata. Az esetek többségében nem igényel manuális beavatkozást.</p>
+            <br>
+            <h3>Push</h3>
+            <p>A helyileg tárolt verziók áttöltése a távoli verziókezelő szerverre.</p><br>
+
+            <h3>Conflict</h3>
+            <p>
+                Konfliktus akkor keletkezik, amikor a verziókezelő rendszer nem tud dönteni a változtatások sorsáról. Ez
+                tipikusan akkor
+                tud bekövetkezni, ha többen dolgoznak ugyanazon a kódon és egynél több ember azonos változtatást
+                eszközöl. Például
+                kitöröl egy sort. A leggyorsabb ember push művelete sikeres lesz, de a többieké nem, mivel nem lehet 2x
+                törölni ugyan
+                azt. Ebben az esetben konfliktus keletkezik, amit manuálisan kell nekünk megoldanunk.
+            </p>
+
+            <p>
+                Egy megoldás lehet az, hogy újra letöltjük a szerver repository-t és ismét elvégezzük a módosításainkat
+                és utána zárunk
+                push művelettel, vagy felülírjuk a repositoryban tárolt fájlt a saját verziónkkal.
+            </p>
+
+            <p>
+                Ennél azonban jobb megoldás, ha a conflict állapotba került fájlokat összefésüljük manuálisan. Az
+                ütközéseket a Git
+                megjelöli soronként. Az összefésülés végezhető bármilyen szövegszerkesztővel, de célszerű valami erre a
+                célra
+                kifejlesztett eszközt használni. A Visual Studio beépítetten természetesen tartalmaz ilyen eszközt.
+            </p><br>
+
+            <h3>Tag</h3>
+            <p>
+                Git esetén a revision number-rel való hivatkozás a fejlesztés egy bizonyos pontjára nem éppen a
+                legkényelmesebb. Ezért a
+                Tag-ek emberileg is olvasható hivatkozási pontokként szolgálnak. Például a szofver egy bizonyos
+                verziójának kiadásakor
+                létrehozunk egy tag-et, amivel aztán hivatkozhatunk az adott revision-re anélkül, hogy egy csomó
+                hexadecimális karaktert
+                írnánk be.
+            </p><br>
+
+            <h3>Fork</h3>
+            <p>
+                Egy szerveren megosztott repository helyi másolata, amin mi dolgozunk. Az általunk létrehozott
+                változtatásokat nem
+                feltétlen kell visszatölteni az eredeti repository-ba.
+            </p><br>
+
+            <h3>Pull request</h3>
+            <p>
+                A korábban fork-olt repository változásait úgy döntünk, hogy visszatöltjük az eredeti forrásba. Abban az
+                esetben, ha nem
+                mi vagyunk az eredeti repository tulajdonosai, vagy nincs ahhoz írási jogunk, akkor egy pull request
+                keletkezik, amit
+                csak az eredeti szerző tud beolvasztani a kódba. A pull request során a változtatási napló is megy a
+                kóddal együtt, így
+                a visszagörgethetőség megmarad.
+            </p><br>
+
+            <h3>Patch</h3>
+            <p>
+                A létrehozott változásokat egy fájlba írjuk ki, amely beolvasztható automatikusan a repository-ba abban
+                az esetben, ha a
+                repository revision number-je nem haladt tovább a patch-ben tárolt értékhez képest. Ellenkező esetben
+                manuális
+                beolvasztást igényel. A patch fájlba írt változtatások, majd a patch alkalmazása csak egy bejegyzéssel
+                görgeti tovább a
+                revision numbert, így a patch csak teljes egészében távolítható el, részenként nem.
+            </p>
+        </article>
+        <article>
+            <h2>Olvass tovább!</h2>
+        </article>
+    </section>
+    <footer>
+        <a href="index.html"><button class="prev_next">
+                << Previous</button></a>
+        <a href="oldal_3.html"><button class="prev_next">Next >></button></a>
+
+    </footer>
+
+    <script>
+        //const szoveg_1 = document.getElementById("sz1").value;
+        //console.log(szoveg_1);
+        const szoveg_1_btn = document.getElementById("sz1_btn");
+
+        szoveg_1_btn.onclick = function () {
+            sz1.select();
+            document.execCommand("Copy")
+        }
+        const szoveg_2_btn = document.getElementById("sz2_btn");
+
+        szoveg_2_btn.onclick = function () {
+            sz2.select();
+            document.execCommand("Copy")
+        }
+    </script>
+
+</body>
+
+</html>
